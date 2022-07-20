@@ -1,0 +1,278 @@
+/* body {
+  counter-reset: game;
+}
+input:checked {
+  counter-increment: game;
+}
+.total-count::after {
+  content: counter(game);
+} */
+
+:root {
+  --penguin-head: #ccdbdc;
+  --penuin-beak: #fdc921;
+  --ice: #9ad1d4ff;
+  --background: #cbefff;
+  --deep-blue: #003249ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.audio {
+  display: none;
+}
+.title {
+  font-size: 3rem;
+}
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 15px;
+}
+.score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--deep-blue);
+}
+
+.score span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.penguin {
+  padding: 10px;
+  cursor: pointer;
+}
+.wrapper {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  background-color: var(--background);
+  border: 8px solid black;
+  border-radius: 25px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.layer1,
+.layer2 {
+  position: absolute;
+  z-index: 1;
+  height: 450px;
+  width: 80px;
+  bottom: 0;
+  left: 150px;
+  background-color: var(--penguin-head);
+  border-radius: 40px;
+  animation: hidden 1.5s ease-in-out infinite;
+}
+@keyframes hidden {
+  0% {
+    transform: translateY(90px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(90px);
+  }
+}
+.layer2 {
+  left: 55px;
+  animation: hidden 1.4s ease-in-out infinite;
+}
+.face {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  top: 20px;
+  left: 50%;
+  background-color: #ffffff;
+  border-radius: 40px 40px 0 0;
+}
+.face::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  top: 0px;
+  right: 29px;
+  background-color: #ffffff;
+  border-radius: 40px 40px 0 0;
+}
+
+.eye {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 40%;
+  top: 30%;
+  border-radius: 50px;
+  background-color: #000000;
+  animation: blink 0.7s infinite;
+  /*   animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+}
+
+.eye::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  right: 30px;
+  border-radius: 50px;
+  background-color: #000000;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% {
+    height: 7px;
+  }
+  5% {
+    transform: translate(0px, 3.5px);
+    height: 1px;
+  }
+  10% {
+    transform: translate(0px, 0px);
+    height: 7px;
+  }
+}
+
+.beak {
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: -4px;
+  top: 15px;
+  border-left: 10px solid #f0ad4e;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  transform: rotate(90deg);
+}
+
+.layer3 {
+  position: absolute;
+  z-index: 2;
+  width: 220px;
+  height: 380px;
+  bottom: 0;
+  left: 30px;
+  background-color: var(--ice);
+  border-radius: 25px;
+  box-shadow: 0px 5px 15px grey;
+}
+.layer4 {
+  position: absolute;
+  z-index: 3;
+  height: 330px;
+  width: 80px;
+  bottom: 0;
+  left: 15px;
+  background-color: var(--penguin-head);
+  border-radius: 40px;
+  animation: hidden 1.5s ease-in-out infinite;
+}
+.layer5 {
+  position: absolute;
+  z-index: 4;
+  width: 220px;
+  height: 260px;
+  bottom: 0;
+  left: -3px;
+  background-color: var(--ice);
+  border-radius: 25px;
+  box-shadow: 0px 5px 15px grey;
+}
+.layer6 {
+  position: absolute;
+  z-index: 5;
+  height: 230px;
+  width: 80px;
+  bottom: 0;
+  right: 20px;
+  background-color: var(--penguin-head);
+  border-radius: 40px;
+  animation: hidden 1.2s ease-in-out infinite;
+}
+.layer7 {
+  position: absolute;
+  z-index: 6;
+  width: 120px;
+  height: 160px;
+  bottom: 0;
+  right: 0;
+  background-color: var(--ice);
+  border-radius: 25px;
+  box-shadow: 0px 5px 15px grey;
+}
+.layer8 {
+  position: absolute;
+  z-index: 7;
+  width: 160px;
+  height: 90px;
+  bottom: 0;
+  left: 63px;
+  background-color: var(--deep-blue);
+}
+
+.cloud,
+.cloud2 {
+  position: absolute;
+  z-index: 8;
+  height: 60px;
+  width: 125px;
+  bottom: 0;
+  border-radius: 0 50px 50px 0;
+  background-color: #ffffff;
+}
+.cloud2 {
+  left: 160px;
+  transform: scaleX(-1);
+}
+
+.cloud::before {
+  content: "";
+  position: absolute;
+  z-index: 8;
+  height: 80px;
+  width: 100px;
+  top: -35px;
+  left: -20px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  transform: rotate(-90deg);
+}
+.cloud2::before {
+  content: "";
+  position: absolute;
+  z-index: 8;
+  height: 80px;
+  width: 100px;
+  top: -35px;
+  left: -20px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  transform: rotate(-90deg);
+}
+.text-footer {
+  color: var(--ice);
+  font-size: 1.5rem;
+}
+.text-footer a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--deep-blue);
+}
