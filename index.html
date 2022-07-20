@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>catche me!</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main class="main">
+      <audio
+        class="audio"
+        autoplay
+        controls
+        src="./assets/monkeys-spinning-monkeys-kevin-macleod-main-version-02-05-8413.mp3"
+        type="audio/mpeg"
+      ></audio>
+      <section class="wrapper">
+        <!--  <h1 class="title">Catch the penguin</h1> -->
+        <section class="score-container">
+          <h2 class="score">Score: <span class="js-score">0</span></h2>
+          <div class="timer">
+            <h2 class="score">Time: 00:<span class="js-time">30</span></h2>
+          </div>
+        </section>
+        <div class="layer1 js-penguin penguin" id="1">
+          <div class="face">
+            <!--  <input type="checkbox" /> -->
+            <div class="eye"></div>
+            <div class="beak"></div>
+          </div>
+        </div>
+
+        <div class="layer2 js-penguin penguin" id="2">
+          <div class="face">
+            <div class="eye"></div>
+            <div class="beak"></div>
+          </div>
+        </div>
+
+        <div class="layer3"></div>
+
+        <div class="layer4 js-penguin penguin" id="3">
+          <div class="face">
+            <div class="eye"></div>
+            <div class="beak"></div>
+          </div>
+        </div>
+
+        <div class="layer5"></div>
+        <div class="layer6 js-penguin penguin" id="4">
+          <div class="face">
+            <div class="eye"></div>
+            <div class="beak"></div>
+          </div>
+        </div>
+        <div class="layer7"></div>
+        <div class="layer8"></div>
+        <div class="layer9">
+          <div class="cloud"></div>
+        </div>
+        <div class="layer10">
+          <div class="cloud2"></div>
+        </div>
+      </section>
+      <p class="text-footer">
+        created by <a href="lupeMorales">lupeMorales</a>
+      </p>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
