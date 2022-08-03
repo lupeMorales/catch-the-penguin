@@ -4,6 +4,7 @@ const score = document.querySelector(".js-score");
 const time = document.querySelector(".js-time");
 const warning = document.querySelector(".js-warning");
 const windowModal = document.querySelector(".js-modal");
+const windowScore = document.querySelector(".js-modalScore");
 const initialModal = document.querySelector(".js-modalCount");
 
 let count = 0;
@@ -18,11 +19,15 @@ function stopCounter() {
   count = count;
   score.innerHTML = count;
 }
-function stopPenguin() {
+function stopPenguins() {
   penguins.forEach((item) => {
     item.style.animation = "hidden 1.4s ease-in-out";
   });
 }
+function showScore() {
+  windowScore.classList.remove("hidden");
+}
+
 function addPenguinListener() {
   for (const penguin of penguins) {
     penguin.addEventListener("click", handleClickPeguin);
@@ -36,15 +41,11 @@ function countDown() {
   time.innerHTML = timer;
   if (timer === 0) {
     timeOver();
+    setTimeout(showScore, 3000);
   }
 }
 id = setInterval(countDown, 1000);
 
-function timeOver() {
-  clearInterval(id);
-  warning.innerHTML = "game over!";
-  stopPenguin();
-}
 function startGame() {
   modalCount--;
   initialModal.innerHTML = modalCount;
@@ -56,5 +57,10 @@ function startGame() {
 }
 setInterval(startGame, 1000);
 
+function timeOver() {
+  clearInterval(id);
+  warning.innerHTML = "game over!";
+  stopPenguins();
+}
 startGame();
 addPenguinListener();
