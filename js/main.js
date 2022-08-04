@@ -12,11 +12,36 @@ const initialModal = document.querySelector(".js-modalCount");
 let count = 0;
 let timer = 14;
 let modalCount = 4;
-function reset() {
-  count = 0;
-  timer = 14;
-  modalCount = 4;
+
+btnPlayAgain.addEventListener("click", handleClickPlayAgain);
+
+function countDown() {
+  console.log("empieza el juego");
+  modalCount--;
+  initialModal.innerHTML = modalCount;
+  if (modalCount === 0) {
+    initialModal.innerHTML = "Go";
+    clearInterval(idInitialCount);
+    windowModal.classList.add("hidden");
+    startGame();
+  }
 }
+idInitialCount = setInterval(countDown, 1000);
+
+function startGame() {
+  gameTimer();
+  addPenguinListener();
+}
+
+function gameTimer() {
+  timer--;
+  time.innerHTML = timer;
+  if (timer === 0) {
+    timeOver();
+    setTimeout(showScore, 3000);
+  }
+}
+id = setInterval(gameTimer, 1000);
 
 function scoreCounter() {
   count++;
@@ -50,36 +75,18 @@ function handleClickPlayAgain(ev) {
   windowScore.classList.add("hidden");
   windowModal.classList.remove("hidden");
   reset();
-  startGame();
+  countDown();
 }
-function countDown() {
-  timer--;
-  time.innerHTML = timer;
-  if (timer === 0) {
-    timeOver();
-    setTimeout(showScore, 3000);
-  }
-}
-id = setInterval(countDown, 1000);
-
-function startGame() {
-  console.log("empieza el juego");
-  modalCount--;
-  initialModal.innerHTML = modalCount;
-  if (modalCount === 0) {
-    initialModal.innerHTML = "Go";
-    clearInterval(idInitialCount);
-    windowModal.classList.add("hidden");
-    countDown();
-  }
-}
-idInitialCount = setInterval(startGame, 1000);
 
 function timeOver() {
   clearInterval(id);
   warning.innerHTML = "game over!";
   stopPenguins();
 }
-btnPlayAgain.addEventListener("click", handleClickPlayAgain);
-startGame();
-addPenguinListener();
+function reset() {
+  count = 0;
+  timer = 14;
+  modalCount = 4;
+}
+countDown();
+/* addPenguinListener(); */
