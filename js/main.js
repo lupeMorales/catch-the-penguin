@@ -14,8 +14,6 @@ let count = 0;
 let timer = 14;
 let modalCount = 4;
 
-btnPlayAgain.addEventListener("click", handleClickPlayAgain);
-
 function countDown() {
   console.log("empieza el juego");
   modalCount--;
@@ -52,6 +50,13 @@ function stopCounter() {
   count = count;
   score.innerHTML = count;
 }
+function saveMyScore() {
+  localStorage.setItem("score", count);
+}
+function loadMyScore() {
+  const dataLocalStorage = localStorage.getItem("score");
+  console.log(dataLocalStorage);
+}
 function stopPenguins() {
   penguins.forEach((item) => {
     item.style.animation = "hidden 1.4s ease-in-out";
@@ -67,6 +72,20 @@ function addPenguinListener() {
     penguin.addEventListener("click", handleClickPeguin);
   }
 }
+
+function timeOver() {
+  clearInterval(id);
+  warning.innerHTML = "game over!";
+  stopPenguins();
+  saveMyScore();
+  loadMyScore();
+}
+function reset() {
+  count = 0;
+  timer = 14;
+  modalCount = 4;
+}
+
 function handleClickPeguin(ev) {
   timer !== 0 ? scoreCounter() : stopCounter();
 }
@@ -79,15 +98,6 @@ function handleClickPlayAgain(ev) {
   countDown();
 }
 
-function timeOver() {
-  clearInterval(id);
-  warning.innerHTML = "game over!";
-  stopPenguins();
-}
-function reset() {
-  count = 0;
-  timer = 14;
-  modalCount = 4;
-}
-/* countDown(); */
+btnPlayAgain.addEventListener("click", handleClickPlayAgain);
+countDown();
 /* addPenguinListener(); */
