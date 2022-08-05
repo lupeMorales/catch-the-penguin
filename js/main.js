@@ -3,6 +3,7 @@ const penguins = document.querySelectorAll(".js-penguin");
 const score = document.querySelector(".js-score");
 const totalScore = document.querySelector(".js-actualScore");
 const btnPlayAgain = document.querySelector(".js-playAgain");
+
 const time = document.querySelector(".js-time");
 const warning = document.querySelector(".js-warning");
 const windowModal = document.querySelector(".js-modal");
@@ -88,5 +89,5 @@ function reset() {
   timer = 14;
   modalCount = 4;
 }
-countDown();
+/* countDown(); */
 /* addPenguinListener(); */
