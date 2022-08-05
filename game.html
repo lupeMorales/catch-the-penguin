@@ -23,16 +23,22 @@
           </div>
         </div>
         <div class="modal-score js-modalScore hidden">
-          <p class="text-score">
+          <h2 class="text-score">
             Your score: <span class="js-actualScore text-score">0</span>
-          </p>
+          </h2>
 
-          <button title="Play" class="button-play js-playAgain">Play Again</button>
+          <button title="Play" class="button-play js-playAgain">
+            Play Again
+          </button>
+          <div class="best-scores">
+            <h3 class="subtitle">best scores:</h3>
+            <ul class="js-bestScore"></ul>
+          </div>
         </div>
         <section class="score-container">
-          <h2 class="score">Score: <span class="js-score">0</span></h2>
+          <h3 class="subtitle">Score: <span class="js-score">0</span></h3>
           <div class="timer">
-            <h2 class="score">Time: <span class="js-time"></span></h2>
+            <h3 class="subtitle">Time: <span class="js-time"></span></h3>
           </div>
         </section>
         <p class="gameOver js-warning"></p>

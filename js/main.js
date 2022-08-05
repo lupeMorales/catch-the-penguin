@@ -1,6 +1,7 @@
 "user strict";
 const penguins = document.querySelectorAll(".js-penguin");
 const score = document.querySelector(".js-score");
+const bestScore = document.querySelector(".js-bestScore");
 const totalScore = document.querySelector(".js-actualScore");
 const btnPlayAgain = document.querySelector(".js-playAgain");
 
@@ -13,6 +14,7 @@ const initialModal = document.querySelector(".js-modalCount");
 let count = 0;
 let timer = 14;
 let modalCount = 4;
+let myBestScore = [];
 
 function countDown() {
   console.log("empieza el juego");
@@ -55,8 +57,10 @@ function saveMyScore() {
 }
 function loadMyScore() {
   const dataLocalStorage = localStorage.getItem("score");
-  console.log(dataLocalStorage);
+  myBestScore.push(dataLocalStorage);
+  console.log("array myBest", myBestScore);
 }
+
 function stopPenguins() {
   penguins.forEach((item) => {
     item.style.animation = "hidden 1.4s ease-in-out";
@@ -65,6 +69,15 @@ function stopPenguins() {
 function showScore() {
   windowScore.classList.remove("hidden");
   totalScore.innerHTML = count;
+  loadMyScore();
+  renderMyBest();
+}
+function renderMyBest() {
+  let html = "";
+  for (let i = 0; i < myBestScore.length; i++) {
+    html += `<li class="subtitle best-scores__li">${myBestScore[i]}</li>`;
+  }
+  bestScore.innerHTML = html;
 }
 
 function addPenguinListener() {
@@ -78,7 +91,6 @@ function timeOver() {
   warning.innerHTML = "game over!";
   stopPenguins();
   saveMyScore();
-  loadMyScore();
 }
 function reset() {
   count = 0;
@@ -100,4 +112,5 @@ function handleClickPlayAgain(ev) {
 
 btnPlayAgain.addEventListener("click", handleClickPlayAgain);
 countDown();
+loadMyScore();
 /* addPenguinListener(); */

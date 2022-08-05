@@ -40,14 +40,14 @@
   align-items: flex-start;
   padding: 10px 15px;
 }
-.score {
+.subtitle {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
   color: var(--deep-blue);
 }
 
-.score span {
+.subtitle span {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -320,6 +320,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   text-align: center;
   position: absolute;
   top: -7px;
@@ -352,6 +353,13 @@
   font-size: 1.6rem;
   color: #ffffff;
   text-decoration: none;
+}
+.best-scores {
+  margin-top: 25px;
+}
+.best-scores ul {
+  margin-top: 10px;
+  list-style: none;
 }
 .hidden {
   display: none;
