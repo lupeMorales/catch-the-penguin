@@ -17,7 +17,6 @@ let modalCount = 4;
 let myBestScore = [];
 
 function countDown() {
-  console.log("empieza el juego");
   modalCount--;
   initialModal.innerHTML = modalCount;
   if (modalCount === 0) {
@@ -106,11 +105,10 @@ function handleClickPlayAgain(ev) {
   console.log("no misiela");
   windowScore.classList.add("hidden");
   windowModal.classList.remove("hidden");
-  reset();
   countDown();
+  reset();
 }
 
 btnPlayAgain.addEventListener("click", handleClickPlayAgain);
 countDown();
 loadMyScore();
-/* addPenguinListener(); */
