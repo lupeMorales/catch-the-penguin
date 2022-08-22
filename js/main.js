@@ -14,7 +14,7 @@ const initialModal = document.querySelector(".js-modalCount");
 let count = 0;
 let timer = 14;
 let modalCount = 4;
-let myBestScore = [];
+const myBestScore = [];
 
 function countDown() {
   modalCount--;
@@ -52,9 +52,13 @@ function stopCounter() {
   score.innerHTML = count;
 }
 function saveMyScore() {
+  /*   myBestScore.push(count);
+  localStorage.setItem("score", myBestScore); */
   localStorage.setItem("score", count);
 }
 function loadMyScore() {
+  /* localStorage.getItem("score");
+  console.log("array myBest", myBestScore); */
   const dataLocalStorage = localStorage.getItem("score");
   myBestScore.push(dataLocalStorage);
   console.log("array myBest", myBestScore);
@@ -105,8 +109,8 @@ function handleClickPlayAgain(ev) {
   console.log("no misiela");
   windowScore.classList.add("hidden");
   windowModal.classList.remove("hidden");
-  countDown();
   reset();
+  setInterval(countDown, 1000);
 }
 
 btnPlayAgain.addEventListener("click", handleClickPlayAgain);
