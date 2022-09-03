@@ -48,18 +48,11 @@ function scoreCounter() {
   count++;
   score.innerHTML = count;
 }
-/* function stopCounter() {
-    count = count; 
-  score.innerHTML = count;
-} */
+
 function saveMyScore() {
-  /*   myBestScore.push(count);
-  localStorage.setItem("score", myBestScore); */
   localStorage.setItem("score", count);
 }
 function loadMyScore() {
-  /* localStorage.getItem("score");
-  console.log("array myBest", myBestScore); */
   const dataLocalStorage = localStorage.getItem("score");
   myBestScore.push(dataLocalStorage);
   console.log("array myBest", myBestScore);
@@ -107,7 +100,6 @@ function handleClickPeguin() {
 }
 function handleClickPlayAgain(ev) {
   ev.preventDefault();
-  console.log("no misiela");
   windowScore.classList.add("hidden");
   windowModal.classList.remove("hidden");
   reset();
