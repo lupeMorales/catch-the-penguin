@@ -7,25 +7,33 @@ const btnPlayAgain = document.querySelector(".js-playAgain");
 
 const time = document.querySelector(".js-time");
 const warning = document.querySelector(".js-warning");
-const windowModal = document.querySelector(".js-modal");
+const window321 = document.querySelector(".js-window321");
 const windowScore = document.querySelector(".js-modalScore");
 const initialModal = document.querySelector(".js-modalCount");
+const windowGame = document.querySelector(".js-game");
 
 let count = 0;
-let timer = 14;
-let modalCount = 4;
+let timer = 10;
+let modalCount = 3;
 const myBestScore = [];
 
+function resetTimer() {
+  console.log("reset time");
+  timer = 10;
+  time.innerHTML = timer;
+}
+
 function countDown() {
-  /*   initialModal.innerHTML = modalCount; */
-  modalCount--;
   initialModal.innerHTML = modalCount;
+  modalCount--;
+  /* initialModal.innerHTML = modalCount; */
   score.innerHTML = count;
 
   if (modalCount === 0) {
     initialModal.innerHTML = "Go";
     clearInterval(idInitialCount);
-    windowModal.classList.add("hidden");
+    window321.classList.add("hidden");
+    resetTimer();
     startGame();
   }
 }
@@ -33,8 +41,9 @@ idInitialCount = setInterval(countDown, 1000);
 
 function startGame() {
   warning.innerHTML = "";
-  gameTimer();
   addPenguinListener();
+  windowGame.classList.remove("hidden");
+  idTimer = setInterval(gameTimer, 1000);
 }
 
 function gameTimer() {
@@ -45,7 +54,6 @@ function gameTimer() {
     setTimeout(showScore, 3000);
   }
 }
-id = setInterval(gameTimer, 1000);
 
 function scoreCounter() {
   count++;
@@ -71,6 +79,7 @@ function showScore() {
   loadMyScore();
   renderMyBest();
   windowScore.classList.remove("hidden");
+  windowGame.classList.add("hidden");
   totalScore.innerHTML = dataLocalStorage;
 }
 function renderMyBest() {
@@ -88,14 +97,14 @@ function addPenguinListener() {
 }
 
 function timeOver() {
-  clearInterval(id);
+  clearInterval(idTimer);
   warning.innerHTML = "time over!";
   stopPenguins();
   saveMyScore();
 }
 function reset() {
   count = 0;
-  timer = 14;
+
   modalCount = 4;
 }
 
@@ -105,7 +114,7 @@ function handleClickPeguin() {
 function handleClickPlayAgain(ev) {
   ev.preventDefault();
   windowScore.classList.add("hidden");
-  windowModal.classList.remove("hidden");
+  window321.classList.remove("hidden");
   reset();
   setInterval(countDown, 1000);
 }
