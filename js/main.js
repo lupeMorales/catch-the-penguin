@@ -17,8 +17,11 @@ let modalCount = 4;
 const myBestScore = [];
 
 function countDown() {
+  /*   initialModal.innerHTML = modalCount; */
   modalCount--;
   initialModal.innerHTML = modalCount;
+  score.innerHTML = count;
+
   if (modalCount === 0) {
     initialModal.innerHTML = "Go";
     clearInterval(idInitialCount);
@@ -63,6 +66,7 @@ function stopPenguins() {
     item.style.animation = "hidden 1.4s ease-in-out";
   });
 }
+
 function showScore() {
   loadMyScore();
   renderMyBest();

@@ -16,13 +16,14 @@
         src="./assets/monkeys-spinning-monkeys-kevin-macleod-main-version-02-05-8413.mp3"
         type="audio/mpeg"
       ></audio>
-      <section class="wrapper">
-        <div class="modal-window js-modal">
+      <div class="wrapper">
+        <section class="modal-window js-modal">
           <div class="modal-count">
             <p class="modal-text js-modalCount"></p>
           </div>
-        </div>
-        <div class="modal-score js-modalScore hidden">
+        </section>
+
+        <section class="modal-score js-modalScore hidden">
           <h2 class="text-score">
             Your score: <span class="js-actualScore text-score">0</span>
           </h2>
@@ -34,13 +35,14 @@
             <h3 class="subtitle">best scores:</h3>
             <ul class="js-bestScore"></ul>
           </div>
-        </div>
-        <section class="score-container">
+        </section>
+
+        <section class="game"> <div class="score-container">
           <h3 class="subtitle">Score: <span class="js-score">0</span></h3>
           <div class="timer">
             <h3 class="subtitle">Time: <span class="js-time"></span></h3>
           </div>
-        </section>
+        </div>
         <p class="gameOver js-warning"></p>
         <div class="layer1 js-penguin penguin" id="1">
           <div class="face">
@@ -81,10 +83,11 @@
         <div class="layer10">
           <div class="cloud2"></div>
         </div>
-      </section>
-      <p class="text-footer">
+      </div></section>
+       
+      <!--  <p class="text-footer">
         created by <a href="lupeMorales">lupeMorales</a>
-      </p>
+      </p> -->
     </main>
     <script src="./js/main.js"></script>
   </body>
