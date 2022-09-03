@@ -74,7 +74,7 @@ function showScore() {
   loadMyScore();
   renderMyBest();
   windowScore.classList.remove("hidden");
-  totalScore.innerHTML = count;
+  totalScore.innerHTML = dataLocalStorage;
 }
 function renderMyBest() {
   let html = "";
