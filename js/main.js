@@ -48,10 +48,10 @@ function scoreCounter() {
   count++;
   score.innerHTML = count;
 }
-function stopCounter() {
-  count = count;
+/* function stopCounter() {
+    count = count; 
   score.innerHTML = count;
-}
+} */
 function saveMyScore() {
   /*   myBestScore.push(count);
   localStorage.setItem("score", myBestScore); */
@@ -102,8 +102,8 @@ function reset() {
   modalCount = 4;
 }
 
-function handleClickPeguin(ev) {
-  timer !== 0 ? scoreCounter() : stopCounter();
+function handleClickPeguin() {
+  timer !== 0 ? scoreCounter() : null;
 }
 function handleClickPlayAgain(ev) {
   ev.preventDefault();
