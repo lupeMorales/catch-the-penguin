@@ -70,10 +70,10 @@ function stopPenguins() {
   });
 }
 function showScore() {
-  windowScore.classList.remove("hidden");
-  totalScore.innerHTML = count;
   loadMyScore();
   renderMyBest();
+  windowScore.classList.remove("hidden");
+  totalScore.innerHTML = count;
 }
 function renderMyBest() {
   let html = "";
@@ -91,7 +91,7 @@ function addPenguinListener() {
 
 function timeOver() {
   clearInterval(id);
-  warning.innerHTML = "game over!";
+  warning.innerHTML = "time over!";
   stopPenguins();
   saveMyScore();
 }
