@@ -29,6 +29,7 @@ function countDown() {
 idInitialCount = setInterval(countDown, 1000);
 
 function startGame() {
+  warning.innerHTML = "";
   gameTimer();
   addPenguinListener();
 }
