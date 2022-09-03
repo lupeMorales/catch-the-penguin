@@ -65,7 +65,6 @@ function saveMyScore() {
 function loadMyScore() {
   const dataLocalStorage = localStorage.getItem("score");
   myBestScore.push(dataLocalStorage);
-  console.log("array myBest", myBestScore);
 }
 
 function stopPenguins() {
@@ -88,6 +87,7 @@ function showScore() {
 }
 function renderMyBest() {
   let html = "";
+  myBestScore.sort((a, b) => b - a);
   for (let i = 0; i < myBestScore.length; i++) {
     html += `<li class="subtitle best-scores__li">${myBestScore[i]}</li>`;
   }
