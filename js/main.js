@@ -88,6 +88,9 @@ function showScore() {
 function renderMyBest() {
   let html = "";
   myBestScore.sort((a, b) => b - a);
+  if (myBestScore.length >= 4) {
+    myBestScore.splice(3, 1);
+  }
   for (let i = 0; i < myBestScore.length; i++) {
     html += `<li class="subtitle best-scores__li">${myBestScore[i]}</li>`;
   }
