@@ -85,6 +85,10 @@
   background-color: var(--penguin-head);
   border-radius: 40px;
   animation: hidden 1.5s ease-in-out infinite;
+  /*   animation-iteration-count:infinite */
+}
+.stop {
+  animation-iteration-count: 0;
 }
 @keyframes hidden {
   0% {

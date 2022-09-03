@@ -18,7 +18,6 @@ let modalCount = 3;
 const myBestScore = [];
 
 function resetTimer() {
-  console.log("reset time");
   timer = 10;
   time.innerHTML = timer;
 }
@@ -71,7 +70,12 @@ function loadMyScore() {
 
 function stopPenguins() {
   penguins.forEach((item) => {
-    item.style.animation = "hidden 1.4s ease-in-out";
+    item.classList.add("stop");
+  });
+}
+function runningPenguins() {
+  penguins.forEach((item) => {
+    item.classList.remove("stop");
   });
 }
 
@@ -104,8 +108,8 @@ function timeOver() {
 }
 function reset() {
   count = 0;
-
   modalCount = 4;
+  runningPenguins();
 }
 
 function handleClickPeguin() {
