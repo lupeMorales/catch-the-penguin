@@ -69,12 +69,15 @@ function loadMyScore() {
 
 function stopPenguins() {
   penguins.forEach((item) => {
-    item.classList.add("stop");
+    item.style.animationIterationCount = 0;
+    /*    item.classList.add("stop"); */
   });
 }
 function runningPenguins() {
   penguins.forEach((item) => {
-    item.classList.remove("stop");
+    /* item.classList.remove("stop"); */
+    item.style.animationIterationCount = "infinite";
+    console.log("dale a tu cuerpo alegría");
   });
 }
 
@@ -111,8 +114,7 @@ function timeOver() {
 }
 function reset() {
   count = 0;
-  modalCount = 4;
-  runningPenguins();
+  modalCount = 3;
 }
 
 function handleClickPeguin() {
@@ -124,6 +126,7 @@ function handleClickPlayAgain(ev) {
   window321.classList.remove("hidden");
   reset();
   setInterval(countDown, 1000);
+  runningPenguins();
 }
 
 btnPlayAgain.addEventListener("click", handleClickPlayAgain);

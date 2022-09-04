@@ -84,8 +84,8 @@
   left: 150px;
   background-color: var(--penguin-head);
   border-radius: 40px;
-  animation: hidden 1.5s ease-in-out infinite;
-  /*   animation-iteration-count:infinite */
+  animation: hidden 1.5s ease-in-out /* infinite */;
+  animation-iteration-count: infinite;
 }
 .stop {
   animation-iteration-count: 0;
@@ -195,7 +195,8 @@
   left: 15px;
   background-color: var(--penguin-head);
   border-radius: 40px;
-  animation: hidden 1.5s ease-in-out infinite;
+  animation: hidden 1.5s ease-in-out /* infinite */;
+  animation-iteration-count: infinite;
 }
 .layer5 {
   position: absolute;
@@ -217,7 +218,8 @@
   right: 20px;
   background-color: var(--penguin-head);
   border-radius: 40px;
-  animation: hidden 1.2s ease-in-out infinite;
+  animation: hidden 1.2s ease-in-out /* infinite */;
+  animation-iteration-count: infinite;
 }
 .layer7 {
   position: absolute;
