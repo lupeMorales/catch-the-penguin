@@ -77,7 +77,6 @@ function runningPenguins() {
   penguins.forEach((item) => {
     /* item.classList.remove("stop"); */
     item.style.animationIterationCount = "infinite";
-    console.log("dale a tu cuerpo alegría");
   });
 }
 
@@ -86,7 +85,7 @@ function showScore() {
   renderMyBest();
   windowScore.classList.remove("hidden");
   windowGame.classList.add("hidden");
-  totalScore.innerHTML = dataLocalStorage;
+  totalScore.innerHTML = localStorage.getItem("score");
 }
 function renderMyBest() {
   let html = "";
