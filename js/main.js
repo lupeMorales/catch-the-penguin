@@ -129,5 +129,5 @@ function handleClickPlayAgain(ev) {
 }
 
 btnPlayAgain.addEventListener("click", handleClickPlayAgain);
-countDown();
+/* countDown(); */
 loadMyScore();
