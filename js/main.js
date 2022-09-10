@@ -21,12 +21,10 @@ function resetTimer() {
   timer = 10;
   time.innerHTML = timer;
 }
-
-function countDown() {
+/* initialModal.innerHTML = modalCount; */
+/* function countDown() {
   initialModal.innerHTML = modalCount;
   modalCount--;
-  /* initialModal.innerHTML = modalCount; */
-  score.innerHTML = count;
 
   if (modalCount === 0) {
     initialModal.innerHTML = "Go";
@@ -36,10 +34,28 @@ function countDown() {
     startGame();
   }
 }
-idInitialCount = setInterval(countDown, 1000);
+idInitialCount = setInterval(countDown, 1000); */
+
+function countDown() {
+  initialModal.innerHTML = modalCount;
+  console.log(modalCount);
+  if (modalCount === 0) {
+    clearInterval(interval);
+    initialModal.innerHTML = "go";
+    /*   window321.classList.add("hidden"); */
+    setTimeout(startGame, 1000);
+    /*   startGame(); */
+  }
+  modalCount--;
+}
+
+let interval = setInterval(countDown, 1000);
 
 function startGame() {
+  window321.classList.add("hidden");
+  score.innerHTML = count;
   warning.innerHTML = "";
+  resetTimer();
   addPenguinListener();
   windowGame.classList.remove("hidden");
   idTimer = setInterval(gameTimer, 1000);
@@ -121,9 +137,10 @@ function handleClickPeguin() {
 }
 function handleClickPlayAgain(ev) {
   ev.preventDefault();
+  reset();
   windowScore.classList.add("hidden");
   window321.classList.remove("hidden");
-  reset();
+
   setInterval(countDown, 1000);
   runningPenguins();
 }
