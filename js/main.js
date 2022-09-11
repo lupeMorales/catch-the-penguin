@@ -1,5 +1,5 @@
 "user strict";
-const penguins = document.querySelectorAll(".js-penguin");
+const pengins = document.querySelectorAll(".js-pengin");
 const score = document.querySelector(".js-score");
 const bestScore = document.querySelector(".js-bestScore");
 const totalScore = document.querySelector(".js-actualScore");
@@ -56,7 +56,7 @@ function startGame() {
   score.innerHTML = count;
   warning.innerHTML = "";
   resetTimer();
-  addPenguinListener();
+  addPenginListener();
   windowGame.classList.remove("hidden");
   idTimer = setInterval(gameTimer, 1000);
 }
@@ -83,15 +83,13 @@ function loadMyScore() {
   myBestScore.push(dataLocalStorage);
 }
 
-function stopPenguins() {
-  penguins.forEach((item) => {
+function stopPengins() {
+  pengins.forEach((item) => {
     item.style.animationIterationCount = 0;
-    /*    item.classList.add("stop"); */
   });
 }
-function runningPenguins() {
-  penguins.forEach((item) => {
-    /* item.classList.remove("stop"); */
+function runningPengins() {
+  pengins.forEach((item) => {
     item.style.animationIterationCount = "infinite";
   });
 }
@@ -115,16 +113,16 @@ function renderMyBest() {
   bestScore.innerHTML = html;
 }
 
-function addPenguinListener() {
-  for (const penguin of penguins) {
-    penguin.addEventListener("click", handleClickPeguin);
+function addPenginListener() {
+  for (const pengin of pengins) {
+    pengin.addEventListener("click", handleClickPeguin);
   }
 }
 
 function timeOver() {
   clearInterval(idTimer);
   warning.innerHTML = "time over!";
-  stopPenguins();
+  stopPengins();
   saveMyScore();
 }
 function reset() {
@@ -142,7 +140,7 @@ function handleClickPlayAgain(ev) {
   window321.classList.remove("hidden");
 
   setInterval(countDown, 1000);
-  runningPenguins();
+  runningPengins();
 }
 
 btnPlayAgain.addEventListener("click", handleClickPlayAgain);

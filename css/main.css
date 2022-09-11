@@ -1,9 +1,10 @@
 :root {
-  --penguin-head: #ccdbdc;
+  --pengin-head: #ccdbdc;
   --penuin-beak: #fdc921;
   --ice: #9ad1d4ff;
   --background: #cbefff;
   --deep-blue: #003249ff;
+  --orange: #ef5b0c;
 }
 * {
   margin: 0;
@@ -28,11 +29,84 @@
   flex-direction: column;
   align-items: center;
 }
+/* bsnowbackground */
+
+@keyframes backgroundSnow {
+  from {
+    top: -10px;
+  }
+  to {
+    top: 680px;
+  }
+}
+
+@keyframes snowflakes {
+  0% {
+    transform: rotate(-180deg) translate(0px, 0px);
+  }
+  100% {
+    transform: rotate(180deg) translate(10px, 75px);
+  }
+}
+#snow div {
+  position: absolute;
+  top: -40px;
+  animation-name: backgroundSnow, snowflakes;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+}
+.snowflake {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  z-index: 999;
+}
+.snowflake.f1 {
+  font-size: 3rem;
+  left: 40px;
+  animation-duration: 5s;
+  z-index: 999;
+}
+.snowflake.f2 {
+  font-size: 2.8rem;
+  left: 120px;
+  animation-duration: 7s;
+  z-index: 999;
+}
+.snowflake.f3 {
+  font-size: 3.5rem;
+  left: 200px;
+  animation-duration: 8s;
+  z-index: 999;
+}
+.snowflake.f4 {
+  font-size: 2.5rem;
+  left: 280px;
+  animation-duration: 6s;
+  z-index: 999;
+}
+.snowflake.f5 {
+  font-size: 3.5rem;
+  left: 280px;
+  animation-duration: 6s;
+  z-index: 999;
+}
+
 .title {
   margin-top: 40%;
-  text-align: center;
   font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: left;
+  width: 6ch;
+  transform: scaleY(1.2);
+  line-height: 0.8;
+  animation: slideInDown;
+  animation-duration: 3s;
+  color: var(--deep-blue);
 }
+
 /* game window */
 .score-container {
   display: flex;
@@ -59,7 +133,7 @@
   color: var(--deep-blue);
   text-transform: capitalize;
 }
-.penguin {
+.pengin {
   padding: 10px;
   cursor: pointer;
 }
@@ -67,6 +141,9 @@
   position: relative;
   width: 300px;
   height: 600px;
+
+  background: linear-gradient(var(--background), white);
+
   background-color: var(--background);
   border: 8px solid black;
   border-radius: 25px;
@@ -82,14 +159,12 @@
   width: 80px;
   bottom: 0;
   left: 150px;
-  background-color: var(--penguin-head);
+  background-color: var(--pengin-head);
   border-radius: 40px;
-  animation: hidden 1.5s ease-in-out /* infinite */;
+  animation: hidden 1.5s ease-in-out;
   animation-iteration-count: infinite;
 }
-.stop {
-  animation-iteration-count: 0;
-}
+
 @keyframes hidden {
   0% {
     transform: translateY(90px);
@@ -193,9 +268,9 @@
   width: 80px;
   bottom: 0;
   left: 15px;
-  background-color: var(--penguin-head);
+  background-color: var(--pengin-head);
   border-radius: 40px;
-  animation: hidden 1.5s ease-in-out /* infinite */;
+  animation: hidden 1.5s ease-in-out;
   animation-iteration-count: infinite;
 }
 .layer5 {
@@ -216,9 +291,9 @@
   width: 80px;
   bottom: 0;
   right: 20px;
-  background-color: var(--penguin-head);
+  background-color: var(--pengin-head);
   border-radius: 40px;
-  animation: hidden 1.2s ease-in-out /* infinite */;
+  animation: hidden 1.2s ease-in-out;
   animation-iteration-count: infinite;
 }
 .layer7 {
@@ -353,7 +428,10 @@
   color: #ffffff;
   border-radius: 10px;
   border: none;
-  background-color: var(--deep-blue);
+  background-color: var(--orange);
+  animation: slideInDown;
+  animation-duration: 3s;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .button-play a {
   font-size: 1.6rem;
