@@ -141,10 +141,7 @@
   position: relative;
   width: 300px;
   height: 600px;
-
   background: linear-gradient(var(--background), white);
-
-  background-color: var(--background);
   border: 8px solid black;
   border-radius: 25px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -163,6 +160,21 @@
   border-radius: 40px;
   animation: hidden 1.5s ease-in-out;
   animation-iteration-count: infinite;
+}
+.layerIndex {
+  position: absolute;
+  z-index: 1;
+  height: 120px;
+  width: 80px;
+  bottom: 0;
+  left: 150px;
+  background-color: var(--pengin-head);
+  border-radius: 40px;
+  animation: hidden 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+}
+.l1 {
+  left: 70px;
 }
 
 @keyframes hidden {
