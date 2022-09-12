@@ -21,30 +21,13 @@ function resetTimer() {
   timer = 10;
   time.innerHTML = timer;
 }
-/* initialModal.innerHTML = modalCount; */
-/* function countDown() {
-  initialModal.innerHTML = modalCount;
-  modalCount--;
-
-  if (modalCount === 0) {
-    initialModal.innerHTML = "Go";
-    clearInterval(idInitialCount);
-    window321.classList.add("hidden");
-    resetTimer();
-    startGame();
-  }
-}
-idInitialCount = setInterval(countDown, 1000); */
 
 function countDown() {
   initialModal.innerHTML = modalCount;
-  console.log(modalCount);
-  if (modalCount === 0) {
+  if (modalCount === -1) {
     clearInterval(interval);
     initialModal.innerHTML = "go";
-    /*   window321.classList.add("hidden"); */
-    setTimeout(startGame, 1000);
-    /*   startGame(); */
+    startGame();
   }
   modalCount--;
 }
@@ -138,11 +121,9 @@ function handleClickPlayAgain(ev) {
   reset();
   windowScore.classList.add("hidden");
   window321.classList.remove("hidden");
-
-  setInterval(countDown, 1000);
+  interval = setInterval(countDown, 1000);
   runningPengins();
 }
 
 btnPlayAgain.addEventListener("click", handleClickPlayAgain);
-/* countDown(); */
 loadMyScore();
