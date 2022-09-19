@@ -1,5 +1,12 @@
 # Catch the Penguin :penguin:
-                          |[DEMO](https://lupemorales.github.io/catch-the-penguin/)|
+<span> | </span>  <a href="https://lupemorales.github.io/catch-the-penguin/" target="_blank">   Demo </a><span> | </span>
+    
+   
+   
+  > **Note**
+> Continua en fase de desarrollo
+
+                   
 Bienvenidos a CATCH THE PENGUIN, un juego interactivo para niños creado integramente con VanillaJS y CSS puro.
 
 La dinámica es muy sencilla, consiste en atrapar el mayor número posible de pingüinos en un tiempo determinado. Por cada pingüino un punto!
@@ -17,9 +24,9 @@ La motivación que me ha llevado a crear  Catch The Penguin es practicar con **a
 ### Algunas vistas del juego
 
   
-
-![Mobile](./assets/view2.png)
 ![Mobile](./assets/view3.png)
+![Mobile](./assets/view2.png)
+
 ![gif](./assets/video.gif)
 
 
