@@ -1,24 +1,24 @@
-# Catch the Penguin :penguin:
-<span> | </span>  <a href="https://lupemorales.github.io/catch-the-penguin/" target="_blank">   Demo </a><span> | </span>
+# Catch the Penguin :penguin: <span> | </span>  <a href="https://lupemorales.github.io/catch-the-penguin/" target="_blank">   Demo </a><span> | </span>
+
     
    
    
   > **Note**
-> Continua en fase de desarrollo
+> Continúa en fase de desarrollo
 
                    
-Bienvenidos a CATCH THE PENGUIN, un juego interactivo para niños creado integramente con VanillaJS y CSS puro.
+Bienvenidos a CATCH THE PENGUIN, un juego interactivo para niños creado integramente con **VanillaJS** y **CSS puro**.
 
 La dinámica es muy sencilla, consiste en atrapar el mayor número posible de pingüinos en un tiempo determinado. Por cada pingüino un punto!
 
-Tus 3 mejores puntaciones quedan registradas en el local storage y se muestran al final de la partida.
+Tus 3 mejores puntaciones quedan registradas en el **local storage** y se muestran al final de la partida.
 
 
 Catch the Penguin nace con el proposito de ir creciento a medida que yo también lo voy haciendo como desarrolladora por lo que mi deseo es que siga en continua evolución.
 
 ## Objetivo personal
 
-La motivación que me ha llevado a crear  Catch The Penguin es practicar con **animaciones** y **transiciones** en CSS, dibujar en CSS y poner en práctica lo que iba aprendiendo sobre **JavaScript** en el boorcamp de[ Desarrollo Web de Adalab](https://adalab.es/bootcamp-programacion/): asincronía, local storage, manipulación de los elementos del DOM.....
+La motivación que me ha llevado a crear  Catch The Penguin es practicar con **animaciones** y **transiciones** en CSS, dibujar en CSS y poner en práctica lo que iba aprendiendo sobre **JavaScript** en el boorcamp de[ Desarrollo Web de Adalab](https://adalab.es/bootcamp-programacion/): **asincronía**, local storage, manipulación de los elementos del **DOM**.....
 
 
 ### Algunas vistas del juego
@@ -55,7 +55,7 @@ Aquí os dejo algunos recursos en los que me he apoyado:
 
 ## Lenguajes y Herramientas
 
-<p align="left"> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>    </p>
+<p align="left"> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>    </p>
 
 ## Contacto
 Puedes encontrarme en [![Linkedin](https://i.stack.imgur.com/gVE0j.png) ](https://www.linkedin.com/in/lupe-morales/)
