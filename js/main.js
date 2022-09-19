@@ -24,10 +24,10 @@ function resetTimer() {
 
 function countDown() {
   initialModal.innerHTML = modalCount;
-  if (modalCount === -1) {
+  if (modalCount === 0) {
     clearInterval(interval);
     initialModal.innerHTML = "go";
-    startGame();
+    setTimeout(startGame, 1000);
   }
   modalCount--;
 }
@@ -118,9 +118,9 @@ function handleClickPeguin() {
 }
 function handleClickPlayAgain(ev) {
   ev.preventDefault();
-  reset();
   windowScore.classList.add("hidden");
   window321.classList.remove("hidden");
+  reset();
   interval = setInterval(countDown, 1000);
   runningPengins();
 }
