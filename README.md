@@ -14,11 +14,11 @@ La dinámica es muy sencilla, consiste en atrapar el mayor número posible de pi
 Tus 3 mejores puntaciones quedan registradas en el **local storage** y se muestran al final de la partida.
 
 
-Catch the Penguin nace con el proposito de ir creciento a medida que yo también lo voy haciendo como desarrolladora por lo que mi deseo es que siga en continua evolución.
+Catch the Penguin nace con el proposito de ir creciento a medida que yo también lo vaya haciendo como desarrolladora, por lo que mi deseo es que siga en continua evolución.
 
 ## Objetivo personal
 
-La motivación que me ha llevado a crear  Catch The Penguin es practicar con **animaciones** y **transiciones** en CSS, dibujar en CSS y poner en práctica lo que iba aprendiendo sobre **JavaScript** en el boorcamp de[ Desarrollo Web de Adalab](https://adalab.es/bootcamp-programacion/): **asincronía**, local storage, manipulación de los elementos del **DOM**.....
+La motivación que me ha llevado a crear  Catch The Penguin es practicar con **animaciones** y **transiciones** en CSS, dibujar en CSS y poner en práctica lo que iba aprendiendo sobre **JavaScript** en el bootcamp de[ Desarrollo Web de Adalab](https://adalab.es/bootcamp-programacion/): **asincronía**, local storage, manipulación de los elementos del **DOM**.....
 
 
 ### Algunas vistas del juego
